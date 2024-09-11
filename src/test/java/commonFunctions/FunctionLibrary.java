@@ -127,10 +127,11 @@ public class FunctionLibrary {
 		return df.format(date);
 	}
 	//method for selecting items in list boxes
-	public static void dropDownAction(String LocatorType,String Locatorvalue,String TestData)
+	public static void dropDownAction(String LocatorType,String Locatorvalue,String TestData) throws Throwable
 	{
 		if(LocatorType.equalsIgnoreCase("name"))
 		{
+			//Thread.sleep(2000);
 			int value = Integer.parseInt(TestData);
 			Select element = new Select(driver.findElement(By.name(Locatorvalue)));
 			element.selectByIndex(value);
@@ -138,12 +139,14 @@ public class FunctionLibrary {
 		}
 		if(LocatorType.equalsIgnoreCase("xpath"))
 		{
+			//Thread.sleep(2000);
 			int value = Integer.parseInt(TestData);
 			Select element = new Select(driver.findElement(By.xpath(Locatorvalue)));
 			element.selectByIndex(value);
 		}
 		if(LocatorType.equalsIgnoreCase("id"))
 		{
+			//Thread.sleep(2000);
 			int value = Integer.parseInt(TestData);
 			Select element = new Select(driver.findElement(By.id(Locatorvalue)));
 			element.selectByIndex(value);

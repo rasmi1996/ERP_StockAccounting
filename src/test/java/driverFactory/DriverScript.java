@@ -82,43 +82,42 @@ public class DriverScript {
 						}
 						if(Object_Type.equalsIgnoreCase("dropDownAction"))
 						{
-							//Thread.sleep(4000);
+							Thread.sleep(2000);
 							FunctionLibrary.dropDownAction(Ltype, LValue, TData);
 							logger.log(LogStatus.INFO, Description);
 						}
 						if(Object_Type.equalsIgnoreCase("captureStock"))
 						{
-							//Thread.sleep(4000);
 							FunctionLibrary.captureStock(Ltype, LValue);
 							logger.log(LogStatus.INFO, Description);
 						}
 						if(Object_Type.equalsIgnoreCase("stockTable"))
 						{
-							//Thread.sleep(4000);
+							
 							FunctionLibrary.stockTable();
 							logger.log(LogStatus.INFO, Description);
 						}
 						if(Object_Type.equalsIgnoreCase("captureSup"))
 						{
-							//Thread.sleep(4000);
+							
 							FunctionLibrary.captureSup(Ltype, LValue);
 							logger.log(LogStatus.INFO, Description);
 						}
 						if(Object_Type.equalsIgnoreCase("supplierTable"))
 						{
-							//Thread.sleep(4000);
+							
 							FunctionLibrary.supplierTable();
 							logger.log(LogStatus.INFO, Description);
 						}
 						if(Object_Type.equalsIgnoreCase("captureCus"))
 						{
-							//Thread.sleep(4000);
+							
 							FunctionLibrary.captureCus(Ltype, LValue);
 							logger.log(LogStatus.INFO, Description);
 						}
 						if(Object_Type.equalsIgnoreCase("customerTable"))
 						{
-							//Thread.sleep(4000);
+							
 							FunctionLibrary.customerTable();
 							logger.log(LogStatus.INFO, Description);
 						}
@@ -137,6 +136,7 @@ public class DriverScript {
 						Module_New="False";
 
 					}
+				}
 					if(Module_Status.equalsIgnoreCase("True"))
 					{
 						xl.setCellData(TCSheet, i, 3, "Pass", outputpath);
@@ -149,7 +149,7 @@ public class DriverScript {
 					reports.flush();
 				}
 
-			}
+			
 			else
 			{
 				//write as blocked into status cell in TCsheet
