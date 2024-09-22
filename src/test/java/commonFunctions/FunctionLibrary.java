@@ -106,14 +106,14 @@ public class FunctionLibrary {
 	//method for validating title
 	public static void validateTitle(String Expected_Title)
 	{
-		String Actual_Title = driver.getTitle();
-		try {
-			Assert.assertEquals(Actual_Title, Expected_Title, "Title is Not matching");
-		}catch(Throwable t)
-		{
-			System.out.println(t.getMessage());
-		}
+	String Actual_Title = driver.getTitle();
+	try {
+		Assert.assertEquals(Actual_Title, Expected_Title, "Title is Not matching");
+	}catch(Throwable t)
+	{
+		System.out.println(t.getMessage());
 	}
+}
 	//method for closing browser
 	public static void closeBrowser()
 	{
